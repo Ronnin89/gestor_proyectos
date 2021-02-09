@@ -1,0 +1,23 @@
+<h1>Ingreso de nuevo Proyecto</h1><br>
+
+<%= form_with(model: @proyect, local: true) do |f| %>
+
+    <%= f.label :name, 'Nombre del proyecto' %>
+    <%= f.text_field :name, placeholder: 'Escribe aqui' %>
+    <br>
+    <%= f.label :description, 'Descripcion del proyecto' %>
+    <%= f.text_field :description, placeholder: 'Escribe aqui' %>
+    <br>
+    <%= f.label :state, 'Estado del Proyecto' %>
+    <%= f.select :state, Proyect.statuses.keys %>
+    <br>
+    <%= f.label :initial_date, 'Dia de inicio del proyecto' %>
+    <%= f.date_field :initial_date%>
+    <br>
+    <%= f.label :finish_date, 'Dia de termino del proyecto' %>
+    <%= f.date_field :finish_date%>
+    <br>
+    <br>
+    <%= f.submit 'Crear prestamo' %>
+
+<% end %>
