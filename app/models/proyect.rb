@@ -1,3 +1,3 @@
 class Proyect < ApplicationRecord
-    enum status:[:propuesta, :en_progreso, :terminado]
+    enum state:[:propuesta, :en_progreso, :terminado]
 end

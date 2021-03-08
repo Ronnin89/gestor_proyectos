@@ -3,7 +3,7 @@ class CreateProyects < ActiveRecord::Migration[5.2]
     create_table :proyects do |t|
       t.string :name
       t.string :description
-      t.integer :state, defalut: 0
+      t.integer :state
       t.date :initial_date
       t.date :finish_date
 

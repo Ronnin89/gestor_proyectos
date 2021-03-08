@@ -9,7 +9,7 @@
     <%= f.text_field :description, placeholder: 'Escribe aqui' %>
     <br>
     <%= f.label :state, 'Estado del Proyecto' %>
-    <%= f.select :state, Proyect.statuses.keys %>
+    <%= f.select :state, options_for_select(Proyect.states.keys) %>
     <br>
     <%= f.label :initial_date, 'Dia de inicio del proyecto' %>
     <%= f.date_field :initial_date%>
@@ -18,6 +18,6 @@
     <%= f.date_field :finish_date%>
     <br>
     <br>
-    <%= f.submit 'Crear prestamo' %>
+    <%= f.submit 'Crear proyecto' %>
 
 <% end %>

@@ -2,7 +2,7 @@
 
 <%= search_form_for @q do |f| %>
   <%= f.label :state, "Estado" %>
-  <%= f.select :state, options_for_select(Proyect.statuses, @q.state) %>
+  <%= f.select :state, options_for_select(Proyect.states, @q.state) %>
   <%= f.submit %>
 <% end %>
 
