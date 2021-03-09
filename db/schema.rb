@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_02_09_234339) do
   create_table "proyects", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "state"
+    t.integer "state", default: 0
     t.date "initial_date"
     t.date "finish_date"
     t.datetime "created_at", null: false

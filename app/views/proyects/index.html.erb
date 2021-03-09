@@ -1,8 +1,8 @@
 <h1>Dashboard</h1>
 
 <%= search_form_for @q do |f| %>
-  <%= f.label :state, "Estado" %>
-  <%= f.select :state, options_for_select(Proyect.states, @q.state) %>
+  <%= f.label :state_eq, "Estado" %>
+  <%= f.select :state_eq, options_for_select(Proyect.states, @q.state) %>
   <%= f.submit %>
 <% end %>
 
